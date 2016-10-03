@@ -42,13 +42,16 @@ function homeController($scope) {
 
 	$scope.initializeHomeController = function(){
 		setTimeout(function(){
+			// Show the mailing list signup form
 			$('#emailSubscribeModal').modal('show');
+
+			// When the mailing list popup is closed, start the demo animation
 			$('#emailSubscribeModal').on('hidden.bs.modal', function () {
 				setTimeout(function(){
 					$scope.startFeedbackDemo();
 				},1000);
 			})
-		},500);
+		},400);
 	};
 
 	$scope.initializeHomeController();

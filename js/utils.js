@@ -1,5 +1,4 @@
-var CONFIG = {};
-
+// Log
 var log = {
   info: function(content) {
     console.log('Info -> ' + content)
@@ -15,6 +14,8 @@ var log = {
   }
 }
 
+// Current URL config
+var CONFIG = {};
 var currentURL = window.location.href;
 if(currentURL.indexOf('localhost') > 0) {
   CONFIG.BASE_URL = 'http://orca-stage.workwoo.com';
@@ -28,19 +29,19 @@ $(document).on('click','.navbar-collapse.in',function(e) {
         $(this).collapse('hide');
     }
 });
-
 $(document).click(function(e) {
     if (e.target.id == 'mainLink' || !$(e.target).is('a')) {
         $('.collapse').collapse('hide');        
     }
 });
 
+// Enables the "Fade In" animation
 function showImages(elementSelector, className) {
     var windowHeight = jQuery( window ).height();
     $(elementSelector).each(function(){
         var thisPos = $(this).offset().top;
         var topOfWindow = $(window).scrollTop();
-        if (topOfWindow + windowHeight - 150 > thisPos ) {
+        if (topOfWindow + windowHeight - 175 > thisPos ) {
             $(this).addClass(className);
         }
     });

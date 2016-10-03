@@ -15,6 +15,15 @@
 .grayText {
   color: #999;
 }
+
+.blueShadow {
+  box-shadow: 2px 2px 2px #2ba6d7;
+}
+
+.grayShadow {
+  box-shadow: 2px 2px 2px #d6dde0;
+}
+
 /* ######################### GLOBAL ######################### */
 
 
@@ -318,9 +327,9 @@ textarea {
 @-webkit-keyframes slideFromBottom {
     0%{
       opacity:0;
-      ms-transform: translate(0px, 200px); /* IE 9 */
-      webkit-transform: translate(0px, 200px); /* Safari */
-      transform: translate(0px, 200px);
+      ms-transform: translate(0px, 25px); /* IE 9 */
+      webkit-transform: translate(0px, 25px); /* Safari */
+      transform: translate(0px, 25px);
     }
 
     100%{
@@ -401,9 +410,9 @@ textarea {
   position: relative;
   margin-top: 25px;
   padding: 25px 50px 50px 50px;
-    color: #8ca1a9;
-    background-color: #f3f5f6;
-    box-shadow:3px 3px 0px #2ba6d7;
+  color: #8ca1a9;
+  background-color: #f3f5f6;
+  box-shadow: 2px 2px 2px #1d7598;
 }
 
 #leavingFeedbackInput {

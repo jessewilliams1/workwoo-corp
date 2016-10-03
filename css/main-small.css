@@ -252,6 +252,22 @@
     padding-bottom: 25px;
   }
 
+  .pricingIcon {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 95px;
+    height: 95px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #1d7598;
+  }
+
+  .pricingIcon img {
+    height: 45px;
+    width: 45px;
+  }
+
   .pricingIncludedItem {
     margin-left: 0px;
     text-align: left;

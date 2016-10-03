@@ -17,6 +17,8 @@
 
   h1, h2 {
     text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   h3 {
@@ -102,7 +104,7 @@
     border-bottom: 2px solid #56B8DF;
   }
 
-  .headerMenu {
+  .headerMenu{
     margin: 0px;
     padding: 0px;
     background: none;
@@ -145,8 +147,7 @@
     color: #fff;
     background-color: #56B8DF;
     position: relative;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   .introVideoPreview {
@@ -176,7 +177,6 @@
 
   /*#################### FEATURES ########################*/
   #features {
-    padding-top: 50px;
     padding-bottom: 50px;
     color: #1d789c;
     background-color: #fff;
@@ -186,7 +186,6 @@
 
   /*#################### EXISTING TOOLS ########################*/
   #existing1 {
-    padding-top: 50px;
     padding-bottom: 75px;
     color: #fff;
     background-color: #56B8DF;
@@ -217,16 +216,25 @@
     padding-bottom: 50px;
   }
 
+  .pricingIcon {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 95px;
+    height: 95px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 2px #1d7598;
+  }
+
+  .pricingIcon img {
+    height: 45px;
+    width: 45px;
+  }
+
   .pricingIncludedItem {
     margin-left: 125px;
-  }
-
-  .pricingCheckInside {
-    color: #56DF7D;
-  }
-
-  .pricingCheckOutline {
-    text-shadow: 2px 2px 2px #1d789c;
   }
 
   .pricingContainer {
