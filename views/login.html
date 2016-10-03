@@ -1,0 +1,64 @@
+<div id="login" class="container">
+	<h2 class="text-center whiteText"><i class="fa fa-lock"></i> Login</h2>
+	<form name="loginForm" ng-model="loginInfo" ng-submit="loginSubmit(loginInfo)" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post">
+		<!-- Email -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="loginSubmitting" type="email" name="userEmail" placeholder="Your Email" ng-model="loginInfo.emailAddress" class="form-control defaultInput" maxlength="255" tabindex="1" required/>
+				<span ng-if="(loginForm.userEmail.$invalid && loginForm.userEmail.$viewValue) && loginForm.userEmail.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>Invalid Email</span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Password -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="loginSubmitting" type="password" name="userPassword" placeholder="Your Password" ng-model="loginInfo.password" class="form-control defaultInput" maxlength="255" tabindex="1" required/>
+				<span ng-if="(loginForm.userPassword.$invalid && loginForm.userPassword.$viewValue) && loginForm.userPassword.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>Enter your password</span>
+				</span>
+			</div>
+		</div>
+		
+		<!-- Submit button -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<button ng-disabled="loginForm.$invalid || loginSubmitting" type="submit" id="loginButton" class="btn btn-primary btn-lg btn-block">
+					<span ng-if="!loginSubmitting">LOGIN</span>
+					<span ng-if="loginSubmitting"><i class="fa fa-refresh fa-spin"></i> VERIFYING</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Forgot Password Link -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer text-center">
+				<a class="whiteLink" href="#/forgotpassword">I forgot my password</a>
+			</div>
+		</div>
+
+		<!-- Login Fail Message -->
+		<div ng-if="loginFailed" class="col-md-12 text-left fadeInOut">
+			<div class="inputContainer text-center">
+				<div class="alert alert-danger text-center">
+					<div>Login Failed</div>
+					<div>Double check your info and try again</div>
+				</div>
+			</div>
+		</div>
+
+	</form>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="container-fluid footerBottom">
+	<div class="row">
+		<div class="col-md-12 text-center">
+        	<h4><i class="fa fa-copyright"></i> 2016 WorkWoo Inc.</h4>
+        	<h5>Making people everywhere happier since 2015</h5>
+		</div>
+	</div>
+</div>

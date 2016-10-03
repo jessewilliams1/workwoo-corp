@@ -1,0 +1,110 @@
+<div id="signup" class="container">
+	<h2 class="text-center whiteText">Get started for free.</h2>
+	<h3 class="text-left whiteText">If you want to continue after the 60 day free trial, you'll be asked to enter your credit card info.</h3>
+	<form name="signupForm" ng-model="signupInfo" ng-submit="signup(signupInfo)" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post">
+		<!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+		<input style="display:none" type="email" name="username"/>
+		<input style="display:none" type="password" name="password"/>
+		<!-- Company Name -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="signupSubmitting" type="text" name="companyName" spellcheck="false" placeholder="Your Company or Organization" ng-model="signupInfo.companyName" class="form-control defaultInput" maxlength="255" tabindex="1" required/>
+				<span ng-if="(signupForm.companyName.$invalid && signupForm.companyName.$viewValue) && signupForm.companyName.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>We need your company</span>
+				</span>
+			</div>
+		</div>
+		<!-- First Name -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="signupSubmitting" type="text" name="firstName" spellcheck="false" placeholder="First Name" ng-model="signupInfo.firstName" class="form-control defaultInput" maxlength="255" tabindex="2" required/>
+				<span ng-if="(signupForm.firstName.$invalid && signupForm.firstName.$viewValue) && signupForm.firstName.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>We need your name</span>
+				</span>
+			</div>
+		</div>
+		<!-- Last Name -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="signupSubmitting" type="text" name="lastName" spellcheck="false" placeholder="Last Name" ng-model="signupInfo.lastName" class="form-control defaultInput" maxlength="255" tabindex="3" required/>
+				<span ng-if="(signupForm.lastName.$invalid && signupForm.lastName.$viewValue) && signupForm.lastName.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>We need your name</span>
+				</span>
+			</div>
+		</div>
+		<!-- Email -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="signupSubmitting" type="email" name="userEmail" spellcheck="false" placeholder="Your Email" autocomplete="off" ng-model="signupInfo.userEmail" class="form-control defaultInput" maxlength="255" tabindex="4" required/>
+				<span ng-if="(signupForm.userEmail.$invalid && signupForm.userEmail.$viewValue) && signupForm.userEmail.$touched && !passwordFocused" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>Invalid Email</span>
+				</span>
+			</div>
+		</div>
+		<!-- Password -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input type="password" ng-focus="passwordFocused = true" ng-blur="passwordFocused = false" name="newPassword" autocomplete="new-password" ng-disabled="signupSubmitting" placeholder="Create a Password" ng-model="signupInfo.newPassword" class="form-control defaultInput" maxlength="255" tabindex="5" required/>
+			</div>
+			<!-- Password rules flyout -->
+			<div ng-if="passwordFocused" class="passwordRulesContainerSignup fadeInOut">
+				<span class="passwordRulesContainerArrow"></span>
+				<h3 class="text-center">Password Rules</h3>
+				<p ng-if="!passwordRuleValid('upperCase')" class="passwordRuleItemSignup"><i class="fa fa-times-circle passwordRuleInvalid"></i> One Upper case letter</p>
+				<p ng-if="passwordRuleValid('upperCase')" class="passwordRuleItemSignup"><i class="fa fa-check-circle passwordRuleValid"></i> One Upper case letter</p>
+				<p ng-if="!passwordRuleValid('lowerCase')" class="passwordRuleItemSignup"><i class="fa fa-times-circle passwordRuleInvalid"></i> One Lower case letter</p>
+				<p ng-if="passwordRuleValid('lowerCase')" class="passwordRuleItemSignup"><i class="fa fa-check-circle passwordRuleValid"></i> One Lower case letter</p>
+				<p ng-if="!passwordRuleValid('number')" class="passwordRuleItemSignup"><i class="fa fa-times-circle passwordRuleInvalid"></i> One Number</p>
+				<p ng-if="passwordRuleValid('number')" class="passwordRuleItemSignup"><i class="fa fa-check-circle passwordRuleValid"></i> One Number</p>
+				<p ng-if="!passwordRuleValid('special')" class="passwordRuleItemSignup"><i class="fa fa-times-circle passwordRuleInvalid"></i> One Special Character</p>
+				<p ng-if="passwordRuleValid('special')" class="passwordRuleItemSignup"><i class="fa fa-check-circle passwordRuleValid"></i> One Special Character</p>
+				<p ng-if="!passwordRuleValid('minimum')" class="passwordRuleItemSignup"><i class="fa fa-times-circle passwordRuleInvalid"></i> 8 characters minimum</p>
+				<p ng-if="passwordRuleValid('minimum')" class="passwordRuleItemSignup"><i class="fa fa-check-circle passwordRuleValid"></i> 8 characters minimum</p>			
+			</div>
+		</div>
+		<!-- Confirm Password -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input type="password" name="newPasswordConfirm" ng-disabled="signupSubmitting" autocomplete="off" placeholder="Confirm Your Password" ng-model="signupInfo.newPasswordConfirm" class="form-control defaultInput" maxlength="255" tabindex="6" required/>
+				<span ng-if="(signupInfo.newPasswordConfirm != signupInfo.newPassword) && signupForm.newPasswordConfirm.$touched && !passwordFocused" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>Passwords don't match</span>
+				</span>
+			</div>
+		</div>
+		<!-- Submit button -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<button ng-disabled="signupForm.$invalid || signupSubmitting || (signupInfo.newPasswordConfirm != signupInfo.newPassword)" type="submit" id="signupButton" tabindex="7" class="btn btn-primary btn-lg btn-block">
+					<span ng-if="!signupSubmitting">CREATE MY ACCOUNT</span>
+					<span ng-if="signupSubmitting"><i class="fa fa-refresh fa-spin"></i> CREATING YOUR ACCOUNT...</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Login Fail Message -->
+		<div ng-if="loginFailed" class="col-md-12 text-left fadeInOut">
+			<div class="inputContainer text-center">
+				<div class="alert alert-danger text-center">
+					<div>Login Failed</div>
+					<div>Double check your info and try again</div>
+				</div>
+			</div>
+		</div>
+
+	</form>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="container-fluid footerBottom">
+	<div class="row">
+		<div class="col-md-12 text-center">
+        	<h4><i class="fa fa-copyright"></i> 2016 WorkWoo Inc.</h4>
+        	<h5>Making people everywhere happier since 2015</h5>
+		</div>
+	</div>
+</div>

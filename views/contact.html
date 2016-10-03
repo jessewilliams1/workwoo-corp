@@ -1,0 +1,60 @@
+<div id="contact" class="container">
+	<h2 class="text-center whiteText">Contact Us <i class="fa fa-comment-o"></i></h2>
+
+	<form name="form12" ng-model="contactInfo" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://workwoo.wufoo.com/forms/z1vwzer11asgjs/#public">
+		<!-- Required by WuFoo -->
+		<input type="hidden" name="idstamp" value="FQyIwQ4s7lXGOlV+jQUyk2C1x1iG87CDDZgx+ZMb418="/>
+
+		<!-- Email -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="contactSubmitting" name="Field1" ng-model="contactInfo.emailAddress" placeholder="Your email" type="email" class="form-control defaultInput" spellcheck="false" maxlength="255" tabindex="1" required/>
+				<span ng-if="form12.Field1.$invalid && form12.Field1.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>Invalid email</span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Name & Company -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<input ng-disabled="contactSubmitting" name="Field2" ng-model="contactInfo.nameAndCompany" placeholder="Your name and company" type="text" class="form-control defaultInput" spellcheck="false" maxlength="255" tabindex="2" required/>
+				<span ng-if="form12.Field2.$invalid && form12.Field2.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>We need your name</span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Message -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<textarea ng-disabled="contactSubmitting" name="Field3" ng-model="contactInfo.message" placeholder="How can we help you?" class="form-control defaultInput" spellcheck="true" rows="10" cols="50" tabindex="3" required></textarea>
+				<span ng-if="form12.Field3.$invalid && form12.Field3.$touched" class="invalidFieldIndicator slideDown">
+					<span class="arrowLeft"></span>
+					<span>How can we help you?</span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Submit Button -->
+		<div class="col-md-12 text-left">
+			<div class="inputContainer">
+				<button ng-disabled="form12.$invalid || contactSubmitting" class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">
+					<span>SUBMIT</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="container-fluid footerBottom">
+	<div class="row">
+		<div class="col-md-12 text-center">
+        	<h4><i class="fa fa-copyright"></i> 2016 WorkWoo Inc.</h4>
+        	<h5>Making people everywhere happier since 2015</h5>
+		</div>
+	</div>
+</div>

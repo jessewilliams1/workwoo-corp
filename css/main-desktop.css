@@ -1,0 +1,347 @@
+@media only screen and (min-width : 992px) {
+  /*#################### GLOABL STUFF ########################*/
+
+  .hideInDesktop {
+    display: none;
+  }
+
+  body {
+    color: #1d789c;
+    background-color: #56B8DF;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  a {
+    color: #1d789c;
+    -webkit-transition: .25s;
+    moz-transition: .25s;
+    ms-transition: .25s;
+    o-transition: .25s;
+    transition: .25s;
+  }
+
+  a:hover {
+    color: #f3f5f6;
+  }
+
+  .sectionHeader {
+    margin-bottom: 25px;
+  }
+
+  .featureText {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+/*#################### GLOABL STUFF ########################*/
+
+
+/*#################### FORMS & INPUTS ########################*/
+
+  .arrowLeft {
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 40px solid #de6764;
+  }
+
+  .invalidFieldIndicator {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 5px;
+    width: 200px;
+    background-color: #de6764;
+    position: absolute;
+    top: 17px;
+    right: -210px;
+  }
+
+  .passwordRulesContainer {
+    padding: 5px 25px 25px 25px;
+    background-color: #fff;
+    box-shadow: -3px 3px 0px #2596c3;
+  }
+
+  .passwordRuleItem {
+    margin-left: 100px;
+  }
+  
+  .passwordRuleValid {
+    color: #56DF7D;
+  }
+
+  .passwordRuleInvalid {
+    color: #8ca1a9;
+  }
+  /*#################### FORMS & INPUTS ########################*/
+
+
+  /*#################### HEADER ########################*/
+  .headerContainer {
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #56B8DF;
+  }
+
+  .headerMenu {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+  }
+
+  .headerMenu li {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    background: none;
+  }
+
+  .headerMenu li a {
+    margin: 0px 10px 0px 0px;
+    padding: 10px;
+    background: none;
+  }
+
+  .headerMenu li a:hover {
+    color: #56B8DF;
+    background: none;
+  }
+
+  .headerMenu li .focusButton {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #56B8DF;
+  }
+
+  .headerMenu li .focusButton:hover {
+    color: #fff;
+    background-color: #8ca1a9;
+  }
+  /*#################### HEADER ########################*/
+
+
+  /*#################### INTRO ########################*/
+  #intro {
+    color: #fff;
+    background-color: #56B8DF;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .introVideoPreview {
+    margin: 15px 0px 15px 0px;
+    z-index: 1;
+  }
+
+  .introVideoPreviewPlay {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -69px;
+    margin-top: -50px;
+    opacity: .75;
+    padding: 25px 50px 25px 50px;
+    font-size: 50px;
+    background-color: #777;
+  }
+
+  .introVideoPreviewPlay:hover {
+    cursor: pointer;
+    background-color: #555;
+  }
+  /*#################### INTRO ########################*/
+
+
+  /*#################### FEATURES ########################*/
+  #features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #1d789c;
+    background-color: #fff;
+  }
+  /*#################### FEATURES ########################*/
+
+
+  /*#################### EXISTING TOOLS ########################*/
+  #existing1 {
+    padding-top: 50px;
+    padding-bottom: 75px;
+    color: #fff;
+    background-color: #56B8DF;
+  }
+
+  #existing2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #8ca1a9;
+    background-color: #f3f5f6;
+  }
+
+  #existing3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #8ca1a9;
+    background-color: #fff;
+  }
+  /*#################### EXISTING TOOLS ########################*/
+
+
+ /*#################### PRICING ########################*/
+  #pricing {
+    color: #fff;
+    background-color: #2596c3;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .pricingIncludedItem {
+    margin-left: 125px;
+  }
+
+  .pricingCheckInside {
+    color: #56DF7D;
+  }
+
+  .pricingCheckOutline {
+    text-shadow: 2px 2px 2px #1d789c;
+  }
+
+  .pricingContainer {
+    position: relative;
+    padding-bottom: 25px;
+    color: #8ca1a9;
+    background-color: #fff;
+  }
+
+  .pricingHeader {
+    padding: 10px;
+    color: #fff;
+    background-color: #56B8DF;
+  }
+
+  .pricingPrice {
+    position: relative;
+    font-size: 60px;
+    margin-bottom: 0px;
+    font-weight: 600
+  }
+
+  .pricingPriceSign {
+    position: relative;
+    color: #56DF7D;
+    font-size: 22px;
+    top: -25px;
+  }
+
+  .pricingContent {
+    width:250px;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 20px;
+  }
+  /*#################### PRICING ########################*/
+
+
+  /*#################### JOIN ########################*/
+  #signupBottom {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    color: #8ca1a9;
+    background-color: #2596c3;
+  }
+  /*#################### JOIN ########################*/
+
+
+  /*#################### ABOUT ########################*/
+  #about {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    color: #8ca1a9;
+    background-color: #fff;
+  }
+  /*#################### ABOUT ########################*/
+
+
+
+  /*#################### FOOTER ########################*/
+  #footer {
+    color: #fff;
+    background-color: #56B8DF;
+  }
+  /*#################### FOOTER ########################*/
+
+
+  /*#################### PAGES ########################*/
+  #login,
+  #forgotPassword,
+  #forgotPasswordSubmitted,
+  #resetPasswordSubmitted,
+  #signupSubmitted {
+    padding-top: 0px;
+    max-width: 500px;
+  }
+
+  #resetPassword {
+    margin-top: 0px;
+  }
+
+  #signup {
+    padding-top: 10px;
+    max-width: 600px;
+  }
+
+  #contact,
+  #contactSubmitted {
+    padding-top: 0px;
+    max-width: 600px;
+  }
+
+  .passwordRulesContainerSignup {
+    position: absolute;
+    top: -80px;
+    right: -250px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: -3px 3px 0px #2596c3;
+  }
+
+  .passwordRuleItemSignup {
+  }
+
+  .passwordRulesContainerArrow {
+    position: absolute;
+    top: 100px;
+    left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 40px solid #fff;
+  }
+
+  /*#################### PAGES ########################*/
+
+}
